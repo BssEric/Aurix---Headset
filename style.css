@@ -56,26 +56,20 @@
 
         .menu-toggle {
             cursor: pointer;
-            width: 44px; /* Aumentado para melhor ergonomia de toque */
-            height: 44px;
+            width: 30px;
+            height: 20px;
             display: flex;
             flex-direction: column;
-            justify-content: center;
-            align-items: flex-end;
-            gap: 6px;
+            justify-content: space-between;
             z-index: 101;
         }
 
         .menu-toggle span {
             display: block;
             height: 2px;
-            width: 28px;
+            width: 100%;
             background-color: var(--text-color);
             transition: all 0.3s ease;
-        }
-
-        .menu-toggle span:nth-child(2) {
-            width: 20px;
         }
 
         nav:not(.scrolled) .menu-toggle span {
@@ -133,7 +127,6 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: black;
         }
 
         .hero video {
@@ -145,30 +138,19 @@
             min-height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.8; /* Leve redução para aumentar contraste do texto */
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
-            z-index: 0;
+            opacity: 1.0;
         }
 
         .hero-content {
             position: absolute;
             bottom: 10%;
-            left: 7%;
+            left: 5%;
             text-align: left;
-            z-index: 2;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: clamp(32px, 4vw, 64px); /* Tipografia fluida */
+            font-size: 3.5vw;
             font-weight: 700;
             letter-spacing: -2px;
             margin-bottom: 20px;
@@ -178,11 +160,10 @@
         }
 
         .hero p {
-            font-size: clamp(16px, 1.5vw, 24px);
+            font-size: 1.5vw;
             font-weight: 300;
             color: #777777;
             font-style: italic;
-            transform: translateX(40px);
         }
 
         /* Scroll Indicator */
@@ -236,7 +217,7 @@
 
         /* Sections Geração */
         section {
-            padding: 100px 7%; /* Ajuste de respiro para telas menores */
+            padding: 150px 5%;
         }
 
         .section-title {
@@ -304,7 +285,6 @@
             align-items: center;
             justify-content: center;
             padding: 0;
-            background: black;
         }
 
         .experience-section video {
@@ -315,24 +295,15 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.7;
-        }
-
-        .experience-section::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: rgba(0,0,0,0.3);
-            z-index: 0;
+            opacity: 1;
         }
 
         .experience-content h2 {
-            font-size: clamp(32px, 5vw, 80px);
+            font-size: 5vw;
             font-weight: 700;
             text-align: center;
             line-height: 1.1;
-            color: #ffffff; /* Mudado para branco para contraste premium sobre vídeo */
-            z-index: 1;
+            color: #000000c2;
         }
 
         /* Carousel Section */
@@ -482,7 +453,6 @@
 
         /* Responsividade e Ajustes de Hierarquia Visual */
         @media (max-width: 768px) {
-            nav { padding: 15px 20px; }
             .swiper-slide {
                 width: 85vw; /* Ocupa quase a tela toda no mobile */
                 height: 600px;
@@ -494,20 +464,20 @@
             }
 
             .hero-content {
-                bottom: 15%; /* Sobe um pouco o texto para não chocar com o indicador de scroll */
-                left: 7%;
-                width: 85%;
+                bottom: 10%;
+                left: 5%;
+                width: 90%;
             }
 
             .hero h1 {
-                font-size: 8vw; /* Aumenta a proporção em telas pequenas */
+                font-size: 10vw;
                 line-height: 1.1;
                 margin-bottom: 10px;
             }
 
             .hero p {
-                font-size: 4.5vw; /* Torna o subtítulo legível */
-                transform: translateX(15px); /* Reduz o recuo para não apertar o texto na lateral */
+                font-size: 5vw;
+                transform: none;
             }
 
             .section-title {
