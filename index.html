@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aurix | The Ultimate Headset</title>
+    
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+    <div class="menu-overlay" id="menuOverlay">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Recursos</a></li>
+            <li><a href="#experience">Experiência</a></li>
+            <li><a href="#360">Design 360º</a></li>
+        </ul>
+    </div>
+
+    <nav id="navbar">
+        <a href="#" class="logo"><img src="assets/logo.png" alt="logo"/></a>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <header class="hero" id="home">
+        <video autoplay loop muted playsinline>
+            <source src="assets/Headset_bghero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content gsap-reveal">
+            <h1>AURIX HEADSET X PRO</h1>
+            <p>Feel the Sound</p>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll to reveal</span>
+            <div class="mouse-icon">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="features">
+        <h2 class="section-title gsap-reveal">Projetado em cada detalhe.</h2>
+        <div class="cards-container">
+            <div class="card gsap-reveal">
+                <img src="assets/headsetfrente.png" alt="Audio Espacial" style="border-radius: 10px;">
+                <h3>Áudio Espacial</h3>
+                <p>O som envolve você em 360 graus, criando uma experiência de cinema em qualquer lugar.</p>
+            </div>
+            <div class="card gsap-reveal">
+                <img src="assets/headset_ladoesquerdo.png" alt="Cancelamento de Ruído" style="border-radius: 10px;">
+                <h3>Cancelamento Ativo</h3>
+                <p>Microfones duplos detectam ruídos externos e os anulam com anti-ruído equivalente.</p>
+            </div>
+            <div class="card gsap-reveal">
+                <img src="assets/headsetsemfrontal.png" alt="Bateria" style="border-radius: 10px;">
+                <h3>40h de Bateria</h3>
+                <p>Ouça por dias a fio sem se preocupar. Uma carga de 5 minutos garante 3 horas de som.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+        <video autoplay loop muted playsinline>
+            <source src="assets/Headset_curtindosom.mp4" type="video/mp4">
+        </video>
+        <div class="experience-content gsap-reveal">
+            <h2>Mais que som.<br>Experiência.</h2>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <h2 class="section-title gsap-reveal">Detalhes que fazem a diferença</h2>
+        
+        <div class="swiper mySwiper gsap-reveal">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="assets/Headset_Hastesalum.png" alt="Detalhe 1">
+                    <h3>Hastes em alumínio</h3>
+                    <p>Leveza e resistência aeronáutica.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Headset_almofadas.png" alt="Detalhe 2">
+                    <h3>Almofadas de Memory Foam</h3>
+                    <p>Conforto absoluto que se adapta a você.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Headset_controleabsolut.png" alt="Detalhe 3">
+                    <h3>Coroa Acústica</h3>
+                    <p>Controle de volume preciso e analógico.</p>
+                </div>
+                <div class="swiper-slide">
+                    <img src="assets/Headset_sensi.png" alt="Detalhe 4">
+                    <h3>Sensores Inteligentes</h3>
+                    <p>Pausa automática ao tirar dos ouvidos.</p>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <section class="view-360-section" id="360">
+        <h2 class="section-title gsap-reveal">Explore cada ângulo.</h2>
+        <div class="view-360-container gsap-reveal">
+            <video muted playsinline id="video360" preload="auto">
+                <source src="assets/Headset_360.mp4" type="video/mp4">
+            </video>
+            <input type="range" min="0" max="100" value="0" class="slider-360" id="slider360">
+            <p style="margin-top: 20px; color: #666; font-size: 14px;">Arraste para rotacionar</p>
+        </div>
+    </section>
+
+    <footer>
+        <div>&copy; 2026 Aura Audio. Todos os direitos reservados.</div>
+        <div>
+            <a href="#">Privacidade</a>
+            <a href="#">Termos</a>
+            <a href="#">Suporte</a>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
